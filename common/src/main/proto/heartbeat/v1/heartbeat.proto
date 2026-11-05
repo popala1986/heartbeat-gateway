@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package heartbeat.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "io.github.popala1986.heartbeat.grpc.v1";
+option java_outer_classname = "HeartbeatProto";
+
+service HeartbeatService {
+  rpc SendHeartbeat(HeartbeatRequest) returns (HeartbeatResponse);
+}
+
+message HeartbeatRequest {
+  string correlation_id = 1;
+  string device_id = 2;
+  int64 sequence = 3;
+  google.protobuf.Timestamp sent_at = 4;
+}
+
+enum HeartbeatStatus {
+  HEARTBEAT_STATUS_UNSPECIFIED = 0;
+  HEARTBEAT_STATUS_ACCEPTED = 1;
+  HEARTBEAT_STATUS_TIMEOUT = 2;
+  HEARTBEAT_STATUS_ERROR = 3;
+}
+
+message HeartbeatResponse {
+  string correlation_id = 1;
+  HeartbeatStatus status = 2;
+  google.protobuf.Timestamp acknowledged_at = 3;
+  string details = 4;
+}
