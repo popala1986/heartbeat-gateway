@@ -2,18 +2,18 @@
 protobuf = "4.36.2"
 grpc = "1.85.1"
 protobufPlugin = "0.10.1"
-slf4j = "2.0.19"            # NOWE
-logback = "1.6.6"           # NOWE
+slf4j = "2.0.19"
+logback = "1.6.6"
 
 [libraries]
 protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "protobuf" }
 grpc-protobuf = { module = "io.grpc:grpc-protobuf", version.ref = "grpc" }
 grpc-stub = { module = "io.grpc:grpc-stub", version.ref = "grpc" }
-grpc-netty-shaded = { module = "io.grpc:grpc-netty-shaded", version.ref = "grpc" }     # NOWE
-grpc-services = { module = "io.grpc:grpc-services", version.ref = "grpc" }             # NOWE
-grpc-inprocess = { module = "io.grpc:grpc-inprocess", version.ref = "grpc" }           # NOWE
-slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }                  # NOWE
-logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" } # NOWE
+grpc-netty-shaded = { module = "io.grpc:grpc-netty-shaded", version.ref = "grpc" }
+grpc-services = { module = "io.grpc:grpc-services", version.ref = "grpc" }
+grpc-inprocess = { module = "io.grpc:grpc-inprocess", version.ref = "grpc" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 
 [plugins]
 protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }
