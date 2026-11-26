@@ -11,6 +11,7 @@ dependencies {
     runtimeOnly(libs.logback.classic)
 
     testImplementation(libs.grpc.inprocess)
+    testImplementation(project(":grpc-processor"))
 }
 
 application {
