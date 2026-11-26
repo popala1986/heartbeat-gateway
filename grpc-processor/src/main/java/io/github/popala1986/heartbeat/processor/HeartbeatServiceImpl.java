@@ -11,7 +11,7 @@ import java.time.Instant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-class HeartbeatServiceImpl
+public class HeartbeatServiceImpl
         extends HeartbeatServiceGrpc.HeartbeatServiceImplBase {
 
     private static final Logger log =
@@ -19,7 +19,7 @@ class HeartbeatServiceImpl
 
     private final Clock clock;
 
-    HeartbeatServiceImpl(Clock clock) {
+    public HeartbeatServiceImpl(Clock clock) {
         this.clock = clock;
     }
 
